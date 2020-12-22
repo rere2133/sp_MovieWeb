@@ -15,6 +15,10 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    "@media (max-width: 768px)": {
+      margin: "0 auto",
+      width: "85%",
+    },
     "@media (max-width: 375px)": {
       margin: "0 auto",
       padding: "3rem 0",
@@ -30,6 +34,7 @@ const useStyles = makeStyles((theme) => ({
     overflow: "hidden",
     color: "#f8f8f8",
     padding: 0,
+
     "@media (max-width: 375px)": {
       display: "block",
       padding: 0,
