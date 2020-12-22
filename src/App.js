@@ -11,7 +11,7 @@ function App() {
   useEffect(() => {
     const getComingMovieFromAPI = async () => {
       try {
-        const url = `https://api.themoviedb.org/3/movie/upcoming?api_key=b9b45b6a44b88a0c874ff500038859ee`;
+        const url = `https://api.themoviedb.org/3/movie/upcoming?api_key=b9b45b6a44b88a0c874ff500038859ee&region=TW`;
         const response = await fetch(url, { method: "GET" });
         const data = await response.json();
         setComingMovies(data.results);
@@ -23,7 +23,7 @@ function App() {
 
     const getNowMovieFromAPI = async () => {
       try {
-        const url = `https://api.themoviedb.org/3/movie/now_playing?api_key=b9b45b6a44b88a0c874ff500038859ee`;
+        const url = `https://api.themoviedb.org/3/movie/now_playing?api_key=b9b45b6a44b88a0c874ff500038859ee&region=TW`;
         const response = await fetch(url, { method: "GET" });
         const data = await response.json();
         setNowMovies(data.results);
