@@ -49,7 +49,20 @@ function App() {
         </div>
       </header>
       <main className="container">
-        <MContainer
+        {[
+          { title: "你喜愛的電影", movieData: favorMovies },
+          { title: "上映中", movieData: nowMovies },
+          { title: "即將上映", movieData: comingMovies },
+        ].map((bindProps, idx) => {
+          return (
+            <MContainer
+              {...bindProps}
+              likeNum={likeNum}
+              setLikeNum={setLikeNum}
+            />
+          );
+        })}
+        {/* <MContainer
           title="你喜愛的電影"
           movieData={favorMovies}
           likeNum={likeNum}
@@ -66,7 +79,7 @@ function App() {
           movieData={comingMovies}
           likeNum={likeNum}
           setLikeNum={setLikeNum}
-        />
+        /> */}
       </main>
     </>
   );
