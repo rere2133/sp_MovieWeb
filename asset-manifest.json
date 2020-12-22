@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/https//rere2133.github.io/sp_MovieWeb/static/css/main.da8a0dcd.chunk.css",
-    "main.js": "/https//rere2133.github.io/sp_MovieWeb/static/js/main.07616f9c.chunk.js",
-    "main.js.map": "/https//rere2133.github.io/sp_MovieWeb/static/js/main.07616f9c.chunk.js.map",
-    "runtime-main.js": "/https//rere2133.github.io/sp_MovieWeb/static/js/runtime-main.bc145c56.js",
-    "runtime-main.js.map": "/https//rere2133.github.io/sp_MovieWeb/static/js/runtime-main.bc145c56.js.map",
-    "static/js/2.15d36ac9.chunk.js": "/https//rere2133.github.io/sp_MovieWeb/static/js/2.15d36ac9.chunk.js",
-    "static/js/2.15d36ac9.chunk.js.map": "/https//rere2133.github.io/sp_MovieWeb/static/js/2.15d36ac9.chunk.js.map",
-    "static/js/3.dc00adff.chunk.js": "/https//rere2133.github.io/sp_MovieWeb/static/js/3.dc00adff.chunk.js",
-    "static/js/3.dc00adff.chunk.js.map": "/https//rere2133.github.io/sp_MovieWeb/static/js/3.dc00adff.chunk.js.map",
-    "index.html": "/https//rere2133.github.io/sp_MovieWeb/index.html",
-    "static/css/main.da8a0dcd.chunk.css.map": "/https//rere2133.github.io/sp_MovieWeb/static/css/main.da8a0dcd.chunk.css.map",
-    "static/js/2.15d36ac9.chunk.js.LICENSE.txt": "/https//rere2133.github.io/sp_MovieWeb/static/js/2.15d36ac9.chunk.js.LICENSE.txt"
+    "main.css": "/sp_MovieWeb/static/css/main.da8a0dcd.chunk.css",
+    "main.js": "/sp_MovieWeb/static/js/main.07616f9c.chunk.js",
+    "main.js.map": "/sp_MovieWeb/static/js/main.07616f9c.chunk.js.map",
+    "runtime-main.js": "/sp_MovieWeb/static/js/runtime-main.e5e0e96f.js",
+    "runtime-main.js.map": "/sp_MovieWeb/static/js/runtime-main.e5e0e96f.js.map",
+    "static/js/2.84798b8f.chunk.js": "/sp_MovieWeb/static/js/2.84798b8f.chunk.js",
+    "static/js/2.84798b8f.chunk.js.map": "/sp_MovieWeb/static/js/2.84798b8f.chunk.js.map",
+    "static/js/3.dc00adff.chunk.js": "/sp_MovieWeb/static/js/3.dc00adff.chunk.js",
+    "static/js/3.dc00adff.chunk.js.map": "/sp_MovieWeb/static/js/3.dc00adff.chunk.js.map",
+    "index.html": "/sp_MovieWeb/index.html",
+    "static/css/main.da8a0dcd.chunk.css.map": "/sp_MovieWeb/static/css/main.da8a0dcd.chunk.css.map",
+    "static/js/2.84798b8f.chunk.js.LICENSE.txt": "/sp_MovieWeb/static/js/2.84798b8f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.bc145c56.js",
-    "static/js/2.15d36ac9.chunk.js",
+    "static/js/runtime-main.e5e0e96f.js",
+    "static/js/2.84798b8f.chunk.js",
     "static/css/main.da8a0dcd.chunk.css",
     "static/js/main.07616f9c.chunk.js"
   ]
