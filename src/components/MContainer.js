@@ -37,12 +37,12 @@ function MContainer(props) {
   return (
     <>
       <h2 className="mt-5 mb-3">{title}</h2>
-      <div style={{ height: 350, width: "100%" }}>
+      <div className="movie-wrap">
         <div
-          style={{ paddingTop: 150, color: "#aaa" }}
+          style={{ padding: " 2rem 0.5rem 1rem", color: "#aaa" }}
           hidden={`${isShowM ? "hidden" : ""}`}
         >
-          <h5>目前喜好清單是空的喔，趕緊加入你喜愛的電影吧！</h5>
+          <h5>目前喜好清單是空的，趕緊加入你喜愛的電影吧！</h5>
         </div>
         <Desktop>
           <Carousel itemsToScroll={3} itemsToShow={5} showEmptySlots>
