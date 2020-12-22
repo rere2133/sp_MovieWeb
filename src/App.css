@@ -174,9 +174,11 @@ button:focus {
   }
   .modal-img {
     min-width: 14rem;
+    /* width: 100%;
+    max-height: 250px; */
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 600px) {
   .movie-like {
     left: 65%;
   }
@@ -197,12 +199,20 @@ button:focus {
     padding: 0 2rem;
   }
   .modal-body h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-right: 1rem;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 200px;
+    width: 160px;
+  }
+  .modal-body p {
+    font-size: 14px;
+    text-align: left;
+    font-weight: 400;
+  }
+  .modal-body .score {
+    font-size: 1.2rem;
   }
   .modal-body .tag > div {
     min-width: 3rem;

@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
       margin: "0 auto",
       width: "85%",
     },
-    "@media (max-width: 375px)": {
+    "@media (max-width: 600px)": {
       margin: "0 auto",
       padding: "3rem 0",
       width: "90%",
@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     color: "#f8f8f8",
     padding: 0,
 
-    "@media (max-width: 375px)": {
+    "@media (max-width: 600px)": {
       display: "block",
       padding: 0,
     },
@@ -85,7 +85,7 @@ function Movie(props) {
     overview,
   } = movie;
 
-  //likeList
+  //add favor to localstorage
   const addFavorite = () => {
     let MovieFavor = [];
     if (localStorage.getItem("MovieFavor"))
@@ -107,9 +107,10 @@ function Movie(props) {
       MovieFavor.unshift(obj);
     }
     localStorage.setItem("MovieFavor", JSON.stringify(MovieFavor));
-    // console.log("MovieFavor", MovieFavor);
     setLikeNum(JSON.parse(localStorage.getItem("MovieFavor").length));
   };
+
+  //save slikelist from localstorage
   const favorSave = () => {
     let newMovieFavor = localStorage.getItem("MovieFavor") || "[]";
     newMovieFavor = JSON.parse(newMovieFavor);
