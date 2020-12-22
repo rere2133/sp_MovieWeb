@@ -17,14 +17,16 @@ header h1 {
   margin: 0;
 }
 .poster {
-  width: 200px;
-  height: 300px;
+  width: 170px;
+  /* height: 270px; */
 }
 .movie-part h2 {
   font-size: 16px;
   margin-top: 1rem;
   /* margin-bottom: 2rem; */
+  width: 150px;
 }
+
 .movie-part p {
   font-size: 14px;
   color: #aaa;
@@ -134,26 +136,36 @@ header h1 {
   color: #ccc;
   letter-spacing: 0.5px;
 }
+
+.rec.rec-dot {
+  display: none;
+}
+.rec.rec-arrow:disabled {
+  visibility: hidden;
+}
+/* button:focus {
+  outline: none;
+} */
+.rec-carousel-item:focus {
+  outline: none;
+  box-shadow: inset 0 0 1px 1px lightgrey;
+}
+
 @media (max-width: 1024px) {
   .poster {
-    max-width: 150px;
-    height: 100%;
+    max-width: 140px;
+    height: 210px;
   }
-  .movie-like {
-    left: 45%;
-  }
+  /* .movie-like {
+    left: 55%;
+  } */
 }
 @media (max-width: 768px) {
-  .poster {
-    max-width: 150px;
-    height: 100%;
+  .rec.rec-arrow {
+    display: none;
   }
 }
 @media (max-width: 375px) {
-  .poster {
-    max-width: 150px;
-    height: 100%;
-  }
   .movie-like {
     left: 65%;
   }

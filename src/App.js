@@ -6,7 +6,7 @@ function App() {
   const [comingMovies, setComingMovies] = useState("");
   const [nowMovies, setNowMovies] = useState("");
   const [favorMovies, setFavorMovies] = useState([]);
-  const [getLike, setGetLike] = useState(0);
+  const [likeNum, setLikeNum] = useState(0);
 
   useEffect(() => {
     const getComingMovieFromAPI = async () => {
@@ -33,9 +33,13 @@ function App() {
     };
     getNowMovieFromAPI();
   }, []);
-  // useEffect(() => {
-  //   setFavorMovies(JSON.parse(localStorage.getItem("MovieFavor")) || []);
-  // }, []);
+  const getMovieFavorFromLS = () => {
+    const newMovieFavor = localStorage.getItem("MovieFavor") || "[]";
+    setFavorMovies(JSON.parse(newMovieFavor));
+  };
+  useEffect(() => {
+    getMovieFavorFromLS();
+  }, [likeNum]);
 
   return (
     <>
@@ -46,13 +50,23 @@ function App() {
       </header>
       <main className="container">
         <MContainer
-          title="我喜愛的電影"
+          title="你喜愛的電影"
           movieData={favorMovies}
-          favorMovies={favorMovies}
-          setFavorMovies={setFavorMovies}
+          likeNum={likeNum}
+          setLikeNum={setLikeNum}
         />
-        <MContainer title="NOW PLAYING" movieData={nowMovies} />
-        <MContainer title="COMING SOON" movieData={comingMovies} />
+        <MContainer
+          title="上映中"
+          movieData={nowMovies}
+          likeNum={likeNum}
+          setLikeNum={setLikeNum}
+        />
+        <MContainer
+          title="即將上映"
+          movieData={comingMovies}
+          likeNum={likeNum}
+          setLikeNum={setLikeNum}
+        />
       </main>
     </>
   );

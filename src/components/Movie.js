@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   MdFavorite,
   MdFavoriteBorder,
@@ -9,7 +9,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
-import { Hidden } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -39,20 +38,17 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Movie(props) {
-  const { movie, favorMovies, setFavorMovies } = props;
+  const { movie, likeNum, setLikeNum } = props;
   const classes = useStyles();
   const [like, setLike] = useState(false);
+  const [likeList, setLikeList] = useState([]);
   const [open, setOpen] = useState(false);
   const [movieDetail, setMovieDetail] = useState({
     genres: [],
     runtime: 0,
   });
 
-  const handleLike = (e) => {
-    setLike(!like);
-    e.currentTarget.classList.toggle("active-movie-like");
-  };
-
+  //modal
   const handleOpen = () => {
     setOpen(true);
     getMovieDetailFromAPI();
@@ -84,14 +80,14 @@ function Movie(props) {
     overview,
   } = movie;
 
-  const addFavorite = (e) => {
-    let MovieFavor = [...favorMovies];
+  //likeList
+  const addFavorite = () => {
+    let MovieFavor = [];
     if (localStorage.getItem("MovieFavor"))
       MovieFavor = JSON.parse(localStorage.getItem("MovieFavor"));
     if (MovieFavor.map((item) => item.id).indexOf(id) > -1) {
+      setLike(!like);
       MovieFavor = MovieFavor.filter((item) => {
-        console.log("id", id);
-        console.log("item", item);
         return item.id !== id;
       });
     } else {
@@ -106,8 +102,18 @@ function Movie(props) {
       MovieFavor.unshift(obj);
     }
     localStorage.setItem("MovieFavor", JSON.stringify(MovieFavor));
-    setFavorMovies(MovieFavor);
+    // console.log("MovieFavor", MovieFavor);
+    setLikeNum(JSON.parse(localStorage.getItem("MovieFavor").length));
   };
+  const favorSave = () => {
+    let newMovieFavor = localStorage.getItem("MovieFavor") || "[]";
+    newMovieFavor = JSON.parse(newMovieFavor);
+    const newLike = newMovieFavor.map((item) => item.id);
+    setLikeList(newLike);
+  };
+  useEffect(() => {
+    favorSave();
+  }, [likeNum]);
 
   return (
     <>
@@ -122,16 +128,20 @@ function Movie(props) {
             className="poster"
             src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
             alt=""
+            draggable="false"
           />
           <div
-            className="movie-like"
+            className={`movie-like ${
+              (likeList.some((item) => item === id) || like) &&
+              "active-movie-like"
+            }`}
             onClick={(e) => {
-              handleLike(e);
+              // handleLike();
               e.stopPropagation();
               addFavorite();
             }}
           >
-            {like ? (
+            {likeList.some((item) => item === id) || like ? (
               <MdFavorite className="like-icon active-icon" />
             ) : (
               <MdFavoriteBorder className="like-icon" />
