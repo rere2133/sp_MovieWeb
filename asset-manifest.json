@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/sp_MovieWeb/static/css/main.046a4068.chunk.css",
-    "main.js": "/sp_MovieWeb/static/js/main.7ecf42b4.chunk.js",
-    "main.js.map": "/sp_MovieWeb/static/js/main.7ecf42b4.chunk.js.map",
-    "runtime-main.js": "/sp_MovieWeb/static/js/runtime-main.e5e0e96f.js",
-    "runtime-main.js.map": "/sp_MovieWeb/static/js/runtime-main.e5e0e96f.js.map",
-    "static/js/2.84798b8f.chunk.js": "/sp_MovieWeb/static/js/2.84798b8f.chunk.js",
-    "static/js/2.84798b8f.chunk.js.map": "/sp_MovieWeb/static/js/2.84798b8f.chunk.js.map",
-    "static/js/3.dc00adff.chunk.js": "/sp_MovieWeb/static/js/3.dc00adff.chunk.js",
-    "static/js/3.dc00adff.chunk.js.map": "/sp_MovieWeb/static/js/3.dc00adff.chunk.js.map",
+    "main.js": "/sp_MovieWeb/static/js/main.07103fce.chunk.js",
+    "main.js.map": "/sp_MovieWeb/static/js/main.07103fce.chunk.js.map",
+    "runtime-main.js": "/sp_MovieWeb/static/js/runtime-main.8c32363a.js",
+    "runtime-main.js.map": "/sp_MovieWeb/static/js/runtime-main.8c32363a.js.map",
+    "static/js/2.38b6087b.chunk.js": "/sp_MovieWeb/static/js/2.38b6087b.chunk.js",
+    "static/js/2.38b6087b.chunk.js.map": "/sp_MovieWeb/static/js/2.38b6087b.chunk.js.map",
+    "static/js/3.e2ecf4ce.chunk.js": "/sp_MovieWeb/static/js/3.e2ecf4ce.chunk.js",
+    "static/js/3.e2ecf4ce.chunk.js.map": "/sp_MovieWeb/static/js/3.e2ecf4ce.chunk.js.map",
     "index.html": "/sp_MovieWeb/index.html",
     "static/css/main.046a4068.chunk.css.map": "/sp_MovieWeb/static/css/main.046a4068.chunk.css.map",
-    "static/js/2.84798b8f.chunk.js.LICENSE.txt": "/sp_MovieWeb/static/js/2.84798b8f.chunk.js.LICENSE.txt"
+    "static/js/2.38b6087b.chunk.js.LICENSE.txt": "/sp_MovieWeb/static/js/2.38b6087b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.e5e0e96f.js",
-    "static/js/2.84798b8f.chunk.js",
+    "static/js/runtime-main.8c32363a.js",
+    "static/js/2.38b6087b.chunk.js",
     "static/css/main.046a4068.chunk.css",
-    "static/js/main.7ecf42b4.chunk.js"
+    "static/js/main.07103fce.chunk.js"
   ]
 }
