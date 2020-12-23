@@ -53,7 +53,7 @@ function App() {
           { title: "你喜愛的電影", movieData: favorMovies },
           { title: "上映中", movieData: nowMovies },
           { title: "即將上映", movieData: comingMovies },
-        ].map((bindProps, idx) => {
+        ].map((bindProps) => {
           return (
             <MContainer
               {...bindProps}
@@ -62,24 +62,6 @@ function App() {
             />
           );
         })}
-        {/* <MContainer
-          title="你喜愛的電影"
-          movieData={favorMovies}
-          likeNum={likeNum}
-          setLikeNum={setLikeNum}
-        />
-        <MContainer
-          title="上映中"
-          movieData={nowMovies}
-          likeNum={likeNum}
-          setLikeNum={setLikeNum}
-        />
-        <MContainer
-          title="即將上映"
-          movieData={comingMovies}
-          likeNum={likeNum}
-          setLikeNum={setLikeNum}
-        /> */}
       </main>
     </>
   );
