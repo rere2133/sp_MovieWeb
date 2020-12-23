@@ -53,15 +53,6 @@ function Movie(props) {
     runtime: 0,
   });
 
-  //modal
-  const handleOpen = () => {
-    setOpen(true);
-    getMovieDetailFromAPI();
-  };
-  const handleClose = () => {
-    setOpen(false);
-  };
-
   const getMovieDetailFromAPI = async () => {
     setMovieDetail((prevState) => ({
       ...prevState,
@@ -126,7 +117,8 @@ function Movie(props) {
       <div
         className="movie-part"
         onClick={() => {
-          handleOpen();
+          setOpen(true);
+          getMovieDetailFromAPI();
         }}
       >
         <div className="movie-img">
@@ -162,7 +154,7 @@ function Movie(props) {
         aria-describedby="transition-modal-description"
         className={classes.modal}
         open={open}
-        onClose={handleClose}
+        onClose={() => setOpen(false)}
         closeAfterTransition
         BackdropComponent={Backdrop}
         BackdropProps={{
